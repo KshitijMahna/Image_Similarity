@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-auto-rows: minmax(70px, auto);
+    row-gap: 15px;
+    justify-items: center;
+    align-items: center;
+}

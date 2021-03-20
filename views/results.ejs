@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/results.css">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Similar Images</h1>
+    <br>
+    <div class="container">
+	    <% if (results.length > 0) { %>
+		    <% results.forEach(result => { %>
+		    <img src="uploads/<%= result.filename %>" height="150px" />
+		    <!--<p>Similarity: <%= result.similarity %></p>-->
+            <% }) %>
+        <% } else { %>
+            <h3>No Matching Image Found</h3>
+        <% } %>
+    </div>
+</body>
+</html>
